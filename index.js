@@ -5,6 +5,8 @@ const token = dotenv.config().parsed.lineToken;
 console.log(token);
 const url = dotenv.config().parsed.lineUrl;
 console.log(url);
+const msg = dotenv.config().parsed.message;
+console.log(msg);
 
 axios({
     method: 'post',
@@ -19,7 +21,7 @@ axios({
 axios.post(
     url, 
     {
-        message: 'This is Test',
+        message: msg,
     }, 
     {
         headers: {
