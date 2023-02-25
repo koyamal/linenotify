@@ -16,4 +16,10 @@ axios.post(
             'Authorization': 'Bearer ' + token
         }
     }
-);
+).then(function (response) {
+    console.log(response);
+    
+}).catch(function (error) {
+    console.log(error);
+    
+});;
