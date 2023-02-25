@@ -29,7 +29,7 @@ const handle = async function(){
     const pubMsg = await axios.post(
         url, 
         {
-            message: "This is test",
+            message,
         }, 
         {
             headers: {
