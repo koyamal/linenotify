@@ -23,3 +23,27 @@ axios.post(
     console.log(error);
     
 });;
+
+
+const handle = async function(){
+    const pubMsg = await axios.post(
+        url, 
+        {
+            message: "This is test",
+        }, 
+        {
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+                'Authorization': 'Bearer ' + token
+            }
+        }
+    ).then(function (response) {
+        console.log(response.data);
+        
+    }).catch(function (error) {
+        console.log(error);
+        
+    });;
+};
+
+handle();
