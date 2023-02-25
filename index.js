@@ -2,11 +2,8 @@ const dotenv = require("dotenv");
 const axios = require("axios");
 
 const token = dotenv.config().parsed.lineToken;
-console.log(token);
 const url = dotenv.config().parsed.lineUrl;
-console.log(url);
-const msg = dotenv.config().parsed.message;
-console.log(msg);
+const message = dotenv.config().parsed.message;
 
 axios({
     method: 'post',
@@ -21,7 +18,7 @@ axios({
 axios.post(
     url, 
     {
-        message: msg,
+        message,
     }, 
     {
         headers: {
