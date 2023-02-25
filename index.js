@@ -3,7 +3,7 @@ const axios = require("axios");
 
 const token = dotenv.config().parsed.lineToken;
 console.log(token);
-const url = dotenv.config().parsed.url;
+const url = dotenv.config().parsed.lineUrl;
 console.log(url);
 
 axios({
@@ -13,10 +13,10 @@ axios({
     responseType: 'stream'
   })
     .then(function (response) {
-      console.log(response.data);
+      //console.log(response.data);
     });
 
-const {data} = await axios.post(
+axios.post(
     url, 
     {
         message: 'This is Test',
@@ -27,6 +27,4 @@ const {data} = await axios.post(
             'Authorization': 'Bearer ' + token
         }
     }
-)
-
-data();
+);
